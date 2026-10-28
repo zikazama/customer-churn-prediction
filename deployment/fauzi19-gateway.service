@@ -1,0 +1,15 @@
+[Unit]
+Description=Gateway API churn fauzi19
+After=fauzi19-tfserving.service
+
+[Service]
+User=fauzi19
+WorkingDirectory=/opt/fauzi19
+ExecStart=/opt/fauzi19/venv/bin/gunicorn --bind 0.0.0.0:8080 --workers 1 --threads 4 --timeout 60 gateway:app
+Restart=always
+RestartSec=5
+MemoryMax=150M
+Nice=5
+
+[Install]
+WantedBy=multi-user.target

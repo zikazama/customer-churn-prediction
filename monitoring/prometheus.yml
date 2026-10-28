@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: "tf-serving-monitor"
+
+scrape_configs:
+  # Endpoint metrik TensorFlow Serving di cloud (Google Cloud Compute Engine), bukan localhost.
+  - job_name: "tf-serving"
+    scrape_interval: 5s
+    metrics_path: /monitoring/prometheus/metrics
+    static_configs:
+      - targets: ["34.122.18.16:8080"]
+        labels:
+          service: tensorflow-serving
+
+  - job_name: "churn-gateway"
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["34.122.18.16:8080"]
+        labels:
+          service: churn-api
+
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["127.0.0.1:9090"]

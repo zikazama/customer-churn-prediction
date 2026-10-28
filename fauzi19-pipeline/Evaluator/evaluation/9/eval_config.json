@@ -1,0 +1,51 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "signatureName": "serving_default",
+        "labelKey": "Churn_xf",
+        "preprocessingFunctionNames": [
+          "transform_features"
+        ]
+      }
+    ],
+    "slicingSpecs": [
+      {}
+    ],
+    "metricsSpecs": [
+      {
+        "metrics": [
+          {
+            "className": "ExampleCount"
+          },
+          {
+            "className": "BinaryAccuracy",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.7
+              }
+            }
+          },
+          {
+            "className": "AUC"
+          },
+          {
+            "className": "Precision"
+          },
+          {
+            "className": "Recall"
+          }
+        ],
+        "modelNames": [
+          ""
+        ]
+      }
+    ]
+  },
+  "version": "0.52.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "/content/fauzi19-pipeline/Trainer/model/8/Format-Serving"
+  }
+}

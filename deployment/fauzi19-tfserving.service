@@ -1,0 +1,14 @@
+[Unit]
+Description=TensorFlow Serving model churn fauzi19
+After=network.target
+
+[Service]
+User=fauzi19
+ExecStart=/usr/bin/tensorflow_model_server --rest_api_port=8501 --port=8500 --model_name=fauzi19-churn-model --model_base_path=/opt/fauzi19/serving_model --monitoring_config_file=/opt/fauzi19/monitoring/prometheus.config --tensorflow_intra_op_parallelism=1 --tensorflow_inter_op_parallelism=1
+Restart=always
+RestartSec=5
+MemoryMax=350M
+Nice=5
+
+[Install]
+WantedBy=multi-user.target

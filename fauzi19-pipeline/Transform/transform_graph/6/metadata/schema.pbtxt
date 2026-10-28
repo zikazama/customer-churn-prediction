@@ -1,0 +1,349 @@
+feature {
+  name: "Churn"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "Churn"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Contract"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "Contract"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Dependents"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "Dependents"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "DeviceProtection"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "DeviceProtection"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "InternetService"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "InternetService"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "MonthlyCharges"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "MultipleLines"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "MultipleLines"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "OnlineBackup"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "OnlineBackup"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "OnlineSecurity"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "OnlineSecurity"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "PaperlessBilling"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "PaperlessBilling"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Partner"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "Partner"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "PaymentMethod"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "PaymentMethod"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "PhoneService"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "PhoneService"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "SeniorCitizen"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: INT
+  bool_domain {
+  }
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "StreamingMovies"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "StreamingMovies"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "StreamingTV"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "StreamingTV"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "TechSupport"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "TechSupport"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "TotalCharges"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "gender"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: BYTES
+  domain: "gender"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "tenure"
+  value_count {
+    min: 1
+    max: 1
+  }
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+string_domain {
+  name: "Churn"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "Contract"
+  value: "Month-to-month"
+  value: "One year"
+  value: "Two year"
+}
+string_domain {
+  name: "Dependents"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "DeviceProtection"
+  value: "No"
+  value: "No internet service"
+  value: "Yes"
+}
+string_domain {
+  name: "InternetService"
+  value: "DSL"
+  value: "Fiber optic"
+  value: "No"
+}
+string_domain {
+  name: "MultipleLines"
+  value: "No"
+  value: "No phone service"
+  value: "Yes"
+}
+string_domain {
+  name: "OnlineBackup"
+  value: "No"
+  value: "No internet service"
+  value: "Yes"
+}
+string_domain {
+  name: "OnlineSecurity"
+  value: "No"
+  value: "No internet service"
+  value: "Yes"
+}
+string_domain {
+  name: "PaperlessBilling"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "Partner"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "PaymentMethod"
+  value: "Bank transfer (automatic)"
+  value: "Credit card (automatic)"
+  value: "Electronic check"
+  value: "Mailed check"
+}
+string_domain {
+  name: "PhoneService"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "StreamingMovies"
+  value: "No"
+  value: "No internet service"
+  value: "Yes"
+}
+string_domain {
+  name: "StreamingTV"
+  value: "No"
+  value: "No internet service"
+  value: "Yes"
+}
+string_domain {
+  name: "TechSupport"
+  value: "No"
+  value: "No internet service"
+  value: "Yes"
+}
+string_domain {
+  name: "gender"
+  value: "Female"
+  value: "Male"
+}
